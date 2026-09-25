@@ -1,9 +1,12 @@
 # 舟券ラボ（funaken-lab）
 
 [![ci](https://github.com/shimomo/funaken-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/shimomo/funaken-lab/actions/workflows/ci.yml)
+[![pages](https://github.com/shimomo/funaken-lab/actions/workflows/pages.yml/badge.svg)](https://github.com/shimomo/funaken-lab/actions/workflows/pages.yml)
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
 ボートレースの買い方を、実際のレース結果で検証するバックテストの実験室です。ブラウザだけで動き、サーバーを持ちません。
+
+**→ [shimomo.github.io/funaken-lab](https://shimomo.github.io/funaken-lab/) でそのまま試せます。**
 
 - **締切前に見えていた情報だけで買う。** 戦略が受け取る型には結果も確定オッズも無いので、未来の情報を読もうとするとコンパイルエラーになります。
 - **払戻は払戻表で決済する。** 特払・不成立・返還・票なし・同着を分けて数え、返還や不成立は回収率の母数から外します（[評価プロトコル](docs/protocol.md)）。
@@ -84,7 +87,7 @@ pnpm backtest --from 2026-09-01 --to 2026-09-07 --strategy boat1-trifecta
 - [ ] 累積損益のグラフと、月別・賭式別の内訳
 - [ ] 買い目表記の型レベル検証（`'1-1-2'` と書いた時点でエラーにする）
 - [ ] 戦略の URL 共有（コードは URL のハッシュにだけ入れ、サーバーには送らない）
-- [ ] GitHub Pages へのデプロイ
+- [x] GitHub Pages へのデプロイ
 - [ ] MCP サーバー（検証エンジンを tools として公開する）
 
 ## データ
