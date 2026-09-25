@@ -1,0 +1,17 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+# フィクスチャは Turnmark API の実データから切り出したもの。整形せずそのまま保つ
+[**/test/fixtures/**]
+insert_final_newline = false
+trim_trailing_whitespace = false

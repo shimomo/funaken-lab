@@ -1,0 +1,18 @@
+{
+  "name": "@funaken-lab/core",
+  "version": "0.0.0",
+  "private": true,
+  "description": "舟券ラボの検証エンジン（データ取得・決済・集計）",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./turnmark": "./src/source/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "fixture": "node scripts/make-fixture.ts"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}
