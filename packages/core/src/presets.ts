@@ -15,6 +15,14 @@ export const boat1Win = defineStrategy({
   decide: () => [bet('win', [1])],
 });
 
+export const boat2Win = defineStrategy({
+  id: 'boat2-win',
+  name: '2号艇の単勝',
+  description: '全レースで 2 号艇の単勝を 100 円ずつ買う。',
+  lookahead: 'none',
+  decide: () => [bet('win', [2])],
+});
+
 export const boat1Trifecta = defineStrategy({
   id: 'boat1-trifecta',
   name: '1号艇頭の3連単 1-23-234',
@@ -68,6 +76,7 @@ export const favoriteWinWithFinalOdds = defineStrategy({
 
 export const PRESET_STRATEGIES: readonly AnyStrategy[] = [
   boat1Win,
+  boat2Win,
   boat1Trifecta,
   topWinRateWin,
   fastestExhibitionWin,
